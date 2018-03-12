@@ -44,7 +44,7 @@ apps=(
     tunnelblick
     vlc
     wireshark
-    nmap
+    zenmap
     postman
 )
 
