@@ -15,7 +15,6 @@ apps=(
     imageoptim
     iterm2
     atom
-    webstorm
     opera
     firefox
     firefoxnightly
@@ -31,7 +30,7 @@ apps=(
     sketch-toolbox
     toggl
     android-studio
-    pycharm-ce
+    pycharm
     adobe-acrobat-reader
     burp-suite
     owasp-zap
