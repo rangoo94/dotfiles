@@ -24,6 +24,7 @@ apps=(
     opera
     spotify
     skype
+    slack
     tower
     gimp
     sketch
