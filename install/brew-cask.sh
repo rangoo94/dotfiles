@@ -2,7 +2,7 @@
 
 # Install Caskroom
 brew tap caskroom/cask
-brew install brew-cask
+brew install brew-cask-completion
 brew tap caskroom/versions
 brew tap colindean/fonts-nonfree
 
