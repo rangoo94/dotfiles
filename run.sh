@@ -2,6 +2,9 @@
 
 set -e
 
+# Start in current directory
+cd "$(dirname "$0")"
+
 # Ensure proper accesses
 if [[ "$OSTYPE" == "darwin"* ]]; then
   ./scripts/osx/ensure-environment.sh
