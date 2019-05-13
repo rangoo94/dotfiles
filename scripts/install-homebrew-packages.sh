@@ -3,6 +3,7 @@
 brew update
 brew upgrade
 brew tap homebrew/cask-versions
+brew tap colindean/fonts-nonfree
 
 # Install main applications
 
