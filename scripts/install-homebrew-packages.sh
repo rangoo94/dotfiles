@@ -17,4 +17,5 @@ brew cask install \
 brew install \
    git bash-completion2 \
    graphviz tcpdump siege ffmpeg watchman tree \
-   coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep
+   coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep \
+   ruby
