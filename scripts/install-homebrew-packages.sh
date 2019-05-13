@@ -7,6 +7,16 @@ brew tap colindean/fonts-nonfree
 
 # Install main applications
 
+HAD_RUBY_INSTALLED=0
+if brew ls --versions ruby > /dev/null; then
+  HAD_RUBY_INSTALLED=1
+fi
+
+HAD_ADOBE_CC_INSTALLED=0
+if brew ls --versions adobe-creative-cloud > /dev/null; then
+  HAD_ADOBE_CC_INSTALLED=1
+fi
+
 brew cask install \
    iterm2 jetbrains-toolbox toggl google-chrome-canary \
    spotify adobe-acrobat-reader calibre firefox gimp \
@@ -14,9 +24,8 @@ brew cask install \
    virtualbox vlc tunnelblick postman wireshark zenmap \
    skype docker sketch font-microsoft-office adobe-creative-cloud
 
-HAD_RUBY_INSTALLED=0
-if brew ls --versions ruby > /dev/null; then
-  HAD_RUBY_INSTALLED=1
+if [[ "$HAD_ADOBE_CC_INSTALLED" == "0" ]]; then
+  open "/usr/local/Caskroom/adobe-creative-cloud/latest/Creative Cloud Installer.app"
 fi
 
 brew install \
