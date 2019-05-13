@@ -14,8 +14,17 @@ brew cask install \
    virtualbox vlc tunnelblick postman wireshark zenmap \
    skype docker sketch font-microsoft-office
 
+HAD_RUBY_INSTALLED=0
+if brew ls --versions ruby > /dev/null; then
+  HAD_RUBY_INSTALLED=1
+fi
+
 brew install \
    git bash-completion2 \
    graphviz tcpdump siege ffmpeg watchman tree \
    coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep \
    ruby
+
+if [[ "$HAD_RUBY_INSTALLED" == "0" ]]; then
+  echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bash_profile
+fi
