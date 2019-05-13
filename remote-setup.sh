@@ -5,9 +5,11 @@
 
 if [ -z "$CMD" ]; then
   echo "No curl or wget available. Aborting."
+  exit 1
 else
   echo "Installing dotfiles"
   mkdir -p "$HOME/dotfiles" && \
   eval "$CMD https://github.com/rangoo94/dotfiles/tarball/master | tar -xzv -C ~/dotfiles --strip-components=1 --exclude='{.gitignore}'"
-  bash "$HOME/dotfiles/run.sh"
+  chmod +x ~/dotfiles/run.sh
+  ~/dotfiles/run.sh
 fi
