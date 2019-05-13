@@ -5,10 +5,6 @@ set -e
 # Start in current directory
 cd "$(dirname "$0")"
 
-# Ensure proper file executable access
-chmod +x scripts/*.sh
-chmod +x scripts/osx/*.sh
-
 # Ensure proper accesses
 if [[ "$OSTYPE" == "darwin"* ]]; then
   . ./scripts/osx/ensure-environment.sh
