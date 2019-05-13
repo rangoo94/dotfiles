@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo chown -R $(whoami) /usr/local/lib/pkgconfig
-
 # Ask for the administrator password upfront
 sudo -v
 

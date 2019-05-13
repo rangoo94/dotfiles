@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo chown -R $(whoami) /usr/local/lib/pkgconfig
+
 if ! [[ -x "$(command -v nvm)" ]]; then
   brew install nvm
   mkdir ~/.nvm
