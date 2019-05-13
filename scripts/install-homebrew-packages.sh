@@ -12,7 +12,7 @@ brew cask install \
    spotify adobe-acrobat-reader calibre firefox gimp \
    burp-suite cyberduck steam owasp-zap tor-browser \
    virtualbox vlc tunnelblick postman wireshark zenmap \
-   skype docker sketch font-microsoft-office
+   skype docker sketch font-microsoft-office adobe-creative-cloud
 
 HAD_RUBY_INSTALLED=0
 if brew ls --versions ruby > /dev/null; then

@@ -77,3 +77,4 @@ Including:
 
 * Install Keynote, Numbers, Pages, CPULed from App Store
 * Install MS Office and set up license
+* Disable guest account
