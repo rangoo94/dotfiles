@@ -11,35 +11,35 @@ chmod +x scripts/osx/*.sh
 
 # Ensure proper accesses
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  ./scripts/osx/ensure-environment.sh
+  . ./scripts/osx/ensure-environment.sh
 fi
 
-./scripts/ensure-access.sh
+. ./scripts/ensure-access.sh
 
 # Configure OSX
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  ./scripts/osx/install-xcode.sh
-  ./scripts/osx/configure-defaults.sh
-  ./scripts/osx/optimize-battery-and-fs.sh
+  . ./scripts/osx/install-xcode.sh
+  . ./scripts/osx/configure-defaults.sh
+  . ./scripts/osx/optimize-battery-and-fs.sh
 fi
 
 # Install Homebrew
-./scripts/install-homebrew.sh
+. ./scripts/install-homebrew.sh
 
 # Install some packages
-./scripts/install-homebrew-packages.sh
-./scripts/install-docker-utils.sh
+. ./scripts/install-homebrew-packages.sh
+. ./scripts/install-docker-utils.sh
 
 # Install Node.js
-./scripts/install-nodejs.sh
+. ./scripts/install-nodejs.sh
 
 # Set default browser to Google Chrome Canary
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  ./scripts/osx/set-default-chrome-browser.sh
+  . ./scripts/osx/set-default-chrome-browser.sh
 fi
 
 # Set up Git user
-./scripts/set-up-git.sh
+. ./scripts/set-up-git.sh
 
 # Reboot
 
