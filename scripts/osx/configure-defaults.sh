@@ -31,6 +31,7 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # Finder
 
+defaults write com.apple.finder AppleShowAllFiles YES
 defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.finder FXDefaultSearchScope SCcf
