@@ -9,5 +9,5 @@ if ! xcode-select --print-path &> /dev/null; then
 
   sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 
-  sudo xcodebuild -license
+  sudo xcodebuild -license accept
 fi

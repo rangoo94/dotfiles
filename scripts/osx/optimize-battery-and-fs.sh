@@ -2,12 +2,12 @@
 
 # Optimize battery in OSX, speed up FS
 
-sudo curl https://raw.githubusercontent.com/wilsonmar/mac-setup/master/configs/limit.maxfiles.plist > limit.maxfiles.plist
+sudo curl https://raw.githubusercontent.com/wilsonmar/mac-setup/431b452d8538e1a3a4e9d2e187c2b1a4d98f0a46/configs/limit.maxfiles.plist > limit.maxfiles.plist
 sudo mv limit.maxfiles.plist /Library/LaunchDaemons/limit.maxfiles.plist
 sudo chmod 644 /Library/LaunchDaemons/limit.maxfiles.plist
 sudo chown root:wheel /Library/LaunchDaemons/limit.maxfiles.plist
 
-sudo curl https://raw.githubusercontent.com/wilsonmar/mac-setup/master/configs/limit.maxproc.plist > limit.maxproc.plist
+sudo curl https://raw.githubusercontent.com/wilsonmar/mac-setup/431b452d8538e1a3a4e9d2e187c2b1a4d98f0a46/configs/limit.maxproc.plist > limit.maxproc.plist
 sudo mv limit.maxproc.plist /Library/LaunchDaemons/limit.maxproc.plist
 sudo chmod 644 /Library/LaunchDaemons/limit.maxproc.plist
 sudo chown root:wheel /Library/LaunchDaemons/limit.maxproc.plist
@@ -22,12 +22,13 @@ sudo sysctl -w net.inet.tcp.msl=1000
 ulimit -S -n 65535
 
 sudo touch /etc/sysctl.conf
-echo "kern.maxfiles=5242880" | sudo tee -a /etc/sysctl.conf
-echo "kern.maxfilesperproc=524288" | sudo tee -a /etc/sysctl.conf
-echo "net.inet.tcp.msl=1000" | sudo tee -a /etc/sysctl.conf
 
-echo "ulimit -n 65536" >> ~/.bash_profile
-echo "ulimit -u 2048" >> ~/.bash_profile
+grep -qxF 'kern.maxfiles=5242880' /etc/sysctl.conf || echo 'kern.maxfiles=5242880' | sudo tee -a /etc/sysctl.conf
+grep -qxF 'kern.maxfilesperproc=524288' /etc/sysctl.conf || echo 'kern.maxfilesperproc=524288' | sudo tee -a /etc/sysctl.conf
+grep -qxF 'net.inet.tcp.msl=1000' /etc/sysctl.conf || echo 'net.inet.tcp.msl=1000' | sudo tee -a /etc/sysctl.conf
+
+grep -qxF 'ulimit -n 65536' ~/.bash_profile || echo 'ulimit -n 65536' >> ~/.bash_profile
+grep -qxF 'ulimit -u 2048' ~/.bash_profile || echo 'ulimit -u 2048' >> ~/.bash_profile
 
 # https://www.lifewire.com/terminal-tricks-to-speed-up-your-mac-4120954
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false

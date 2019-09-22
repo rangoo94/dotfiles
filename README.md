@@ -54,8 +54,10 @@ or put existing to `~/.ssh` directory.
 
 ## Set-up JetBrains IDEs
 
+* Log in to JetBrains Toolkit
+* Install IntelliJ, WebStorm, CLion, GoLand & PyCharm Professional
 * Install Material Theme UI, and set theme to Material Darker
-* Install plugins
+* Install plugins, i.e.
    * [Wallaby.js](https://wallabyjs.com/download/)
    * .ignore
    * Quokka
@@ -66,15 +68,29 @@ or put existing to `~/.ssh` directory.
 Including:
 
 * JetBrains software
-* Adobe Software
+* Adobe Software (Adobe Photoshop CC, Adobe XD)
 * Wallaby.js
 * Sketch
 * Toggl
 * Postman
 * Spotify
 
+## Touchbar
+
+* Configure Touchbar to show "brightness slider" and "mute" natively
+* Install [BetterTouchTool](https://folivora.ai/) and set up its license
+* Import [`rangoo94.bttpreset`](assets/rangoo94.bttpreset) into BTT
+* Install [`btt-toggl`](https://www.npmjs.com/package/btt-toggl) NPM package, configure it and set up proper script in "Toggl"
+
 ## Other stuff
 
 * Install Keynote, Numbers, Pages, CPULed from App Store
+* Install [Monity](https://apps.apple.com/pl/app/monity/id915542151?l=pl&mt=12) from App Store
 * Install MS Office and set up license
 * Disable guest account
+* Adjust Docker resources ("Preferences" > "Advanced"), giving more CPUs and memory
+* Download and set-up [`modern.ie`](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/) virtual machines
+
+## Monity set-up
+
+![Page 1](assets/monity-page-1.png) ![Page 2](assets/monity-page-2.png)
