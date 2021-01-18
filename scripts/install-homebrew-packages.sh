@@ -17,7 +17,7 @@ if brew ls --versions adobe-creative-cloud > /dev/null; then
   HAD_ADOBE_CC_INSTALLED=1
 fi
 
-brew cask install \
+brew install --cask \
    iterm2 jetbrains-toolbox toggl google-chrome-canary \
    spotify adobe-acrobat-reader calibre firefox gimp \
    burp-suite cyberduck steam owasp-zap tor-browser \
