@@ -60,18 +60,13 @@ brew "ansible"
 brew "siege"
 brew "tcpdump"
 brew "terraform"
+brew "tuntap"
 cask "docker"
 cask "lens"
 cask "wireshark"
 cask "vagrant"
 cask "virtualbox"
-cask "tuntap"
 cask "ngrok"
 
 # Communication
 cask "slack"
-
-# Completion
-brew "docker-completion"
-brew "docker-completion"
-brew "docker-compose-completion"
