@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Initialize scripts
-source "$(dirname "$0")/../_init.sh"
+source "$(realpath $(dirname "${BASH_SOURCE[0]}"))/../_init.sh"
 
 ## Mail
 

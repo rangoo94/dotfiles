@@ -3,7 +3,7 @@
 set -e
 
 # Start in current directory
-cd "$(dirname "$0")"
+cd "$(realpath $(dirname "${BASH_SOURCE[0]}"))"
 
 # Confirm configuration
 . ./scripts/_init.sh

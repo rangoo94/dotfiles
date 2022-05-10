@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Initialize scripts
-source "$(dirname "$0")/../_init.sh"
+source "$(realpath $(dirname "${BASH_SOURCE[0]}"))/../_init.sh"
 
 # Set default browser
 if [[ -x "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary" ]]; then

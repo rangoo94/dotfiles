@@ -1,5 +1,6 @@
 #!/bin/bash
 
-source "$(dirname "$0")/_helpers.sh"
-source "$(dirname "$0")/_configure.sh"
+SCRIPTS_PATH="$(realpath $(dirname "${BASH_SOURCE[0]}"))"
+source "$SCRIPTS_PATH/_helpers.sh"
+source "$SCRIPTS_PATH/_configure.sh"
 source ~/.bash_profile
