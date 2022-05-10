@@ -10,6 +10,7 @@ cask_args appdir: "~/Applications", require_sha: true
 
 # Basics
 
+cask "openjdk"
 brew "git"
 brew "git-lfs"
 brew "jq"
@@ -34,7 +35,6 @@ brew "tree"
 brew "bettertouchtool"
 cask "font-microsoft-office"
 cask "macmediakeyforwarder"
-cask "java" unless system "/usr/libexec/java_home --failfast"
 mas "Xcode", id: 497799835
 
 # Browsers
