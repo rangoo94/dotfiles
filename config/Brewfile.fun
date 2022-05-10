@@ -6,7 +6,7 @@ tap "colindean/fonts-nonfree"
 brew "mas"
 
 # Configure
-cask_args appdir: "~/Applications", require_sha: true
+cask_args appdir: "~/Applications"
 
 # Ebooks
 cask "calibre"
