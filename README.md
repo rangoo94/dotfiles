@@ -40,10 +40,9 @@ or put existing to `~/.ssh` directory.
    * [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen)
    * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
    * [OctoLinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp)
-   * [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
    * [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 * Install extensions on "Dev" profile
-   * [DOMListener](https://chrome.google.com/webstore/detail/domlistener/jlfdgnlpibogjanomigieemaembjeolj)
+   * [DOMListener](https://github.com/kdzwinel/DOMListenerExtension)
    * [Full Page Screen Capture](https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl)
    * [Perfmap](https://chrome.google.com/webstore/detail/perfmap/hgpnhiajcdppfbogcpfdgcceepgkhdmk)
    * [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
@@ -55,7 +54,7 @@ or put existing to `~/.ssh` directory.
 ## Set-up JetBrains IDEs
 
 * Log in to JetBrains Toolkit
-* Install IntelliJ, WebStorm, CLion, GoLand & PyCharm Professional
+* Install IntelliJ, WebStorm, CLion, GoLand, PyCharm Professional and DataGrip
 * Install Material Theme UI, and set theme to Material Darker
 * Install plugins, i.e.
    * [Wallaby.js](https://wallabyjs.com/download/)
@@ -69,7 +68,8 @@ Including:
 
 * JetBrains software
 * Adobe Software (Adobe Photoshop CC, Adobe XD)
-* Wallaby.js
+* MS Office
+* Wallaby.js / Quokka
 * Sketch
 * Toggl
 * Postman
@@ -78,19 +78,12 @@ Including:
 ## Touchbar
 
 * Configure Touchbar to show "brightness slider" and "mute" natively
-* Install [BetterTouchTool](https://folivora.ai/) and set up its license
+* Set up [BetterTouchTool](https://folivora.ai/) license
 * Import [`rangoo94.bttpreset`](assets/rangoo94.bttpreset) into BTT
 * Install [`btt-toggl`](https://www.npmjs.com/package/btt-toggl) NPM package, configure it and set up proper script in "Toggl"
 
 ## Other stuff
 
-* Install Keynote, Numbers, Pages, CPULed from App Store
-* Install [Monity](https://apps.apple.com/pl/app/monity/id915542151?l=pl&mt=12) from App Store
-* Install MS Office and set up license
 * Disable guest account
 * Adjust Docker resources ("Preferences" > "Advanced"), giving more CPUs and memory
 * Download and set-up [`modern.ie`](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/) virtual machines
-
-## Monity set-up
-
-![Page 1](assets/monity-page-1.png) ![Page 2](assets/monity-page-2.png)
