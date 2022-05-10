@@ -9,14 +9,14 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 . ./scripts/_init.sh
 
 # Ensure proper accesses
-if is_macos; then
+if macos; then
   . ./scripts/osx/ensure-environment.sh
 fi
 
 . ./scripts/ensure-access.sh
 
 # Configure OSX
-if is_macos; then
+if macos; then
   . ./scripts/osx/install-xcode.sh
   . ./scripts/osx/configure-defaults.sh
   . ./scripts/osx/optimize-battery-and-fs.sh
@@ -33,7 +33,7 @@ fi
 . ./scripts/install-nodejs.sh
 
 # Set default browser to Google Chrome or Google Chrome Canary
-if is_macos; then
+if macos; then
   . ./scripts/osx/set-default-browser.sh
 fi
 
