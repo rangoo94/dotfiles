@@ -17,6 +17,8 @@ add_to_bash_profile() {
   comment_end="# ---- END:   $1 ---- #"
   snippet="$comment_start"$'\n'"$2"$'\n'$comment_end
 
+  touch "$bash_profile_path"
+
   found_block=$(ruby -e "
     content = File.read(ARGV[2])
     results = content.scan(Regexp.new(
