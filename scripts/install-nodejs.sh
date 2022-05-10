@@ -12,7 +12,7 @@ sudo chown -R $(whoami) /usr/local/lib/pkgconfig
 
 if ! [[ -x "$(command -v nvm)" ]]; then
   brew install nvm
-  mkdir ~/.nvm
+  mkdir -p ~/.nvm
   add_to_bash_profile "NVM Setup" "
     export NVM_DIR=~/.nvm
     source $(brew --prefix nvm)/nvm.sh
