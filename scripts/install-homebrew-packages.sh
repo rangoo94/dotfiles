@@ -17,7 +17,7 @@ fi
 
 # Install all applications
 
-HOMEBREW_CONFIG_PATH="$(dirname "${BASH_SOURCE[0]}")/../homebrew"
+HOMEBREW_CONFIG_PATH="$(dirname "${BASH_SOURCE[0]}")/../config"
 
 brew bundle --file="$HOMEBREW_CONFIG_PATH/Brewfile"
 
