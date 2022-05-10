@@ -12,7 +12,7 @@ macos() {
 
 add_to_bash_profile() {
   # "name" "snippet"
-  bash_profile_path="~/.bash_profile"
+  bash_profile_path="$HOME/.bash_profile"
   comment_start="# ---- START: $1 ---- #"
   comment_end="# ---- END:   $1 ---- #"
   snippet="$comment_start"$'\n'"$2"$'\n'"$comment_end"
