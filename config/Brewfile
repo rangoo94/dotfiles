@@ -10,7 +10,7 @@ cask_args appdir: "~/Applications", require_sha: true
 
 # Basics
 
-cask "openjdk"
+brew "openjdk"
 brew "git"
 brew "git-lfs"
 brew "jq"
