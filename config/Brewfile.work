@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "buo/cask-upgrade"
 tap "colindean/fonts-nonfree"
+tap "mongodb/brew"
 brew "mas"
 
 # Configure
