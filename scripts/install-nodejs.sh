@@ -19,11 +19,13 @@ if ! [[ -x "$(command -v nvm)" ]]; then
   "
   source ~/.bash_profile
   nvm install 18
+  nvm alias default 18
 fi
 
 # Install NPM packages
 
 npm i -g \
+  npm \
   clinic \
   cloc \
   autocannon \
