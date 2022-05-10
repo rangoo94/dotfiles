@@ -31,7 +31,7 @@ brew "ruby"
 brew "python@3.10"
 brew "wget"
 brew "tree"
-brew "bettertouchtool"
+cask "bettertouchtool"
 cask "font-microsoft-office"
 cask "macmediakeyforwarder"
 mas "Xcode", id: 497799835
