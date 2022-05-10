@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Initialize scripts
+source "$(dirname "$0")/../_init.sh"
+
 ## Mail
 
 defaults write com.apple.Mail DisableReplyAnimations -bool true

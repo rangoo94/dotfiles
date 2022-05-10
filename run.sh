@@ -5,15 +5,18 @@ set -e
 # Start in current directory
 cd "$(dirname "$0")"
 
+# Confirm configuration
+. ./configure.sh
+
 # Ensure proper accesses
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if is_macos; then
   . ./scripts/osx/ensure-environment.sh
 fi
 
 . ./scripts/ensure-access.sh
 
 # Configure OSX
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if is_macos; then
   . ./scripts/osx/install-xcode.sh
   . ./scripts/osx/configure-defaults.sh
   . ./scripts/osx/optimize-battery-and-fs.sh
@@ -29,9 +32,9 @@ fi
 # Install Node.js
 . ./scripts/install-nodejs.sh
 
-# Set default browser to Google Chrome Canary
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  . ./scripts/osx/set-default-chrome-browser.sh
+# Set default browser to Google Chrome or Google Chrome Canary
+if is_macos; then
+  . ./scripts/osx/set-default-browser.sh
 fi
 
 # Set up Git user

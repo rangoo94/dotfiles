@@ -1,0 +1,75 @@
+# Tap definitions
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "buo/cask-upgrade"
+tap "colindean/fonts-nonfree"
+brew "mas"
+
+# Configure
+cask_args appdir: "~/Applications", require_sha: true
+
+# Tooling
+brew "autoconf"
+brew "pkg-config"
+brew "graphviz"
+brew "apktool"
+brew "jpegoptim"
+cask "toggl-track"
+cask "android-platform-tools"
+mas "Amphetamine", id: 937984704
+
+# Databases
+brew "mongodb-community-shell"
+brew "libpq"
+brew "pgcli"
+
+# Programming
+mas "Xcode", id: 497799835
+brew "nvm"
+brew "v8"
+brew "python3"
+brew "go"
+brew "pipenv"
+brew "pyenv"
+brew "rbenv"
+brew "shellcheck"
+cask "cyberduck"
+cask "jetbrains-toolbox"
+cask "postman"
+
+# Security
+brew "nmap"
+cask "owasp-zap"
+cask "zenmap"
+cask "burp-suite"
+
+# Graphics
+cask "sketch"
+
+# Browsers
+cask "tor-browser"
+cask "google-chrome-canary"
+cask "chromedriver"
+
+# DevOps, cloud & networking
+brew "awscli"
+brew "azure-cli"
+brew "ansible"
+brew "siege"
+brew "tcpdump"
+brew "terraform"
+cask "docker"
+cask "lens"
+cask "wireshark"
+cask "vagrant"
+cask "virtualbox"
+cask "tuntap"
+cask "ngrok"
+
+# Communication
+cask "slack"
+
+# Completion
+brew "docker-completion"
+brew "docker-completion"
+brew "docker-compose-completion"

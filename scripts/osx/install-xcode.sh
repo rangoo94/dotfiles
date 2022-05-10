@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Initialize scripts
+source "$(dirname "$0")/../_init.sh"
+
+# Install Xcode
 if ! xcode-select --print-path &> /dev/null; then
   xcode-select --install &> /dev/null
 
