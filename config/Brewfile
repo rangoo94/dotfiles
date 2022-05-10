@@ -35,6 +35,7 @@ brew "bettertouchtool"
 cask "font-microsoft-office"
 cask "macmediakeyforwarder"
 cask "java" unless system "/usr/libexec/java_home --failfast"
+mas "Xcode", id: 497799835
 
 # Browsers
 

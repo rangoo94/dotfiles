@@ -17,7 +17,6 @@ fi
 
 # Configure OSX
 if macos; then
-  . ./scripts/osx/install-xcode.sh
   . ./scripts/osx/configure-defaults.sh
   . ./scripts/osx/optimize-battery-and-fs.sh
 fi
@@ -26,6 +25,9 @@ fi
 . ./scripts/install-homebrew.sh
 
 # Install some packages
+if macos; then
+  . ./scripts/osx/install-xcode.sh
+fi
 . ./scripts/install-homebrew-packages.sh
 . ./scripts/install-docker-utils.sh
 

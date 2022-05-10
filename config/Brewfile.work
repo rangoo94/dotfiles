@@ -24,7 +24,6 @@ brew "libpq"
 brew "pgcli"
 
 # Programming
-mas "Xcode", id: 497799835
 brew "nvm"
 brew "v8"
 brew "python3"
