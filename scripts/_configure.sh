@@ -21,7 +21,7 @@ FORMAT_END=$'\e[0m'
 
 save() {
   # "name" "value"
-  echo "$1=$2" >> $DOTCONFIG_PATH
+  echo "$1=\"$(echo "$2" | sed 's/"/\\"/g')\"" >> $DOTCONFIG_PATH
   source "$DOTCONFIG_PATH"
 }
 
