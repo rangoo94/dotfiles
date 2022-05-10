@@ -15,9 +15,7 @@ add_to_bash_profile() {
   bash_profile_path="$(realpath ~/.bash_profile)"
   comment_start="# ---- START: $1 ---- #"
   comment_end="# ---- END:   $1 ---- #"
-  snippet="$comment_start"$'\n'"$2"$'\n'$comment_end
-
-  touch "$bash_profile_path"
+  snippet="$comment_start"$'\n'"$2"$'\n'"$comment_end"
 
   found_block=$(ruby -e "
     content = File.read(ARGV[2])
