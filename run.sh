@@ -32,7 +32,9 @@ fi
 . ./scripts/install-docker-utils.sh
 
 # Install Node.js
-. ./scripts/install-nodejs.sh
+if [[ "$IS_WORK" == "true" ]]; then
+  . ./scripts/install-nodejs.sh
+fi
 
 # Set default browser to Google Chrome or Google Chrome Canary
 if macos; then
