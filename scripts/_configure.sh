@@ -57,11 +57,11 @@ do
 
   # Ignore if value already exists
   if [[ "${!name}" ]]; then
-    if [[ "$type" == "password" ]]; then
-      echo $BOLD$CYAN"$name: "$FORMAT_END"********"
-    else
-      echo $BOLD$CYAN"$name: "$FORMAT_END"${!name}"
-    fi
+  #   if [[ "$type" == "password" ]]; then
+  #     echo $BOLD$CYAN"$name: "$FORMAT_END"********"
+  #   else
+  #     echo $BOLD$CYAN"$name: "$FORMAT_END"${!name}"
+  #   fi
     continue
   fi
 
