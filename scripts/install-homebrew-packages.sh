@@ -6,7 +6,7 @@ brew tap homebrew/cask-versions
 brew tap colindean/fonts-nonfree
 
 # Initialize scripts
-source "$(realpath $(dirname "${BASH_SOURCE[0]}"))/_init.sh"
+source "$(dirname "${BASH_SOURCE[0]}")/_init.sh"
 
 # Detect installed apps
 
@@ -17,7 +17,7 @@ fi
 
 # Install all applications
 
-HOMEBREW_CONFIG_PATH="$(realpath $(dirname "${BASH_SOURCE[0]}"))/../homebrew"
+HOMEBREW_CONFIG_PATH="$(dirname "${BASH_SOURCE[0]}")/../homebrew"
 
 brew bundle --file="$HOMEBREW_CONFIG_PATH/Brewfile"
 

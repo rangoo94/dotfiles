@@ -2,14 +2,14 @@
 
 # Load existing configuration
 
-DOTCONFIG_PATH="$(realpath $(dirname "${BASH_SOURCE[0]}"))/../config/.dotconfig"
+DOTCONFIG_PATH="$(dirname "${BASH_SOURCE[0]}")/../config/.dotconfig"
 if test -f "$DOTCONFIG_PATH"; then
   source "$DOTCONFIG_PATH"
 fi
 
 # Define required variables
 
-source "$(realpath $(dirname "${BASH_SOURCE[0]}"))/../config/variables.sh"
+source "$(dirname "${BASH_SOURCE[0]}")/../config/variables.sh"
 
 # Define helpers
 
