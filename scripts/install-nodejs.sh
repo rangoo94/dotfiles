@@ -10,17 +10,13 @@ header "Install Node.js"
 
 sudo chown -R $(whoami) /usr/local/lib/pkgconfig
 
-if ! [[ -x "$(command -v nvm)" ]]; then
-  brew install nvm
-  mkdir -p ~/.nvm
-  add_to_bash_profile "NVM Setup" "
-    export NVM_DIR=~/.nvm
-    source $(brew --prefix nvm)/nvm.sh
-  "
-  source ~/.bash_profile
-  nvm install 18
-  nvm alias default 18
-fi
+brew install nvm
+nvm install 18
+nvm alias default 18
+add_to_bash_profile "NVM Setup" "
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
+"
 
 # Install NPM packages
 
