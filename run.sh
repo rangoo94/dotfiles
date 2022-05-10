@@ -53,6 +53,7 @@ reboot () {
   esac
 }
 
+header "Finished"
 echo "Everything is done! Do you want to reboot now (y/n)?"
 
 # Call on the function

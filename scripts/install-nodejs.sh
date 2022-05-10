@@ -3,6 +3,9 @@
 # Initialize scripts
 source "$(dirname "${BASH_SOURCE[0]}")/_init.sh"
 
+# Show step information
+header "Install Node.js"
+
 # Install NVM
 
 sudo chown -R $(whoami) /usr/local/lib/pkgconfig

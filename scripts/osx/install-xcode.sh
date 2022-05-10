@@ -3,6 +3,9 @@
 # Initialize scripts
 source "$(dirname "${BASH_SOURCE[0]}")/../_init.sh"
 
+# Show step information
+header "OSX: Install Xcode"
+
 # Install Xcode
 
 mas install 497799835

@@ -3,6 +3,9 @@
 # Initialize scripts
 source "$(dirname "${BASH_SOURCE[0]}")/../_init.sh"
 
+# Show step information
+header "OSX: Optimize battery and FS"
+
 # Optimize battery in OSX, speed up FS
 
 sudo curl https://raw.githubusercontent.com/wilsonmar/mac-setup/431b452d8538e1a3a4e9d2e187c2b1a4d98f0a46/configs/limit.maxfiles.plist > limit.maxfiles.plist

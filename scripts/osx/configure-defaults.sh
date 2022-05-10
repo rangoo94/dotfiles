@@ -3,6 +3,9 @@
 # Initialize scripts
 source "$(dirname "${BASH_SOURCE[0]}")/../_init.sh"
 
+# Show step information
+header "OSX: Configure defaults"
+
 ## Mail
 
 defaults write com.apple.Mail DisableReplyAnimations -bool true

@@ -3,6 +3,9 @@
 # Initialize scripts
 source "$(dirname "${BASH_SOURCE[0]}")/_init.sh"
 
+# Show step information
+header "Ensure 'sudo' access"
+
 # Ask for the administrator password upfront
 sudo -v
 

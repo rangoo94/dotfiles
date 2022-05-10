@@ -17,6 +17,8 @@ BOLD=$'\e[1m'
 RED=$'\e[0;31m'
 CYAN=$'\e[0;36m'
 GRAY=$'\e[0;37m'
+BOLD_CYAN=$'\e[1;36m'
+BOLD_RED=$'\e[1;31m'
 FORMAT_END=$'\e[0m'
 
 save() {
@@ -27,8 +29,8 @@ save() {
 
 ask() {
   # "name" "description" "default"
-  echo $BOLD$CYAN"$1:"$FORMAT_END$GRAY" (default: $3)"$FORMAT_END
-  read -p $BOLD$CYAN"   $2: "$FORMAT_END value
+  echo $BOLD_CYAN"$1:"$FORMAT_END$GRAY" (default: $3)"$FORMAT_END
+  read -p $BOLD_CYAN"   $2: "$FORMAT_END value
 }
 
 # Request all missing variables
@@ -58,9 +60,9 @@ do
   # Ignore if value already exists
   if [[ "${!name}" ]]; then
   #   if [[ "$type" == "password" ]]; then
-  #     echo $BOLD$CYAN"$name: "$FORMAT_END"********"
+  #     echo $BOLD_CYAN"$name: "$FORMAT_END"********"
   #   else
-  #     echo $BOLD$CYAN"$name: "$FORMAT_END"${!name}"
+  #     echo $BOLD_CYAN"$name: "$FORMAT_END"${!name}"
   #   fi
     continue
   fi
@@ -82,7 +84,7 @@ do
           break
           ;;
         *)
-          echo $BOLD$RED"   Invalid answer. Enter \"y/yes\" or \"N/no\""$FORMAT_END
+          echo $BOLD_RED"   Invalid answer. Enter \"y/yes\" or \"N/no\""$FORMAT_END
       esac
     elif [[ "$type" == "email" ]]; then
       ask "$name" "$description" "$default_value"
@@ -91,7 +93,7 @@ do
       fi
 
       if ! [[ "$value" == *"@"* ]]; then
-        echo $BOLD$RED"   Invalid e-mail address"$FORMAT_END
+        echo $BOLD_RED"   Invalid e-mail address"$FORMAT_END
         continue
       fi
 
@@ -106,30 +108,30 @@ do
       save "$name" "$value"
       break
     elif [[ "$type" == "password" ]]; then
-      echo $BOLD$CYAN"$name:"$FORMAT_END
-      echo -n $BOLD$CYAN"   $description: "$FORMAT_END
+      echo $BOLD_CYAN"$name:"$FORMAT_END
+      echo -n $BOLD_CYAN"   $description: "$FORMAT_END
       read -s value
 
       if ! [[ "$value" ]]; then
         echo
-        echo $BOLD$RED"   Password is required"$FORMAT_END
+        echo $BOLD_RED"   Password is required"$FORMAT_END
         continue
       fi
 
       echo -e "\r                                                              \r"
-      echo -n $BOLD$CYAN"   Repeat password: "$FORMAT_END
+      echo -n $BOLD_CYAN"   Repeat password: "$FORMAT_END
       read -s value2
       echo
 
       if ! [[ "$value" == "$value2" ]]; then
-        echo $BOLD$RED"   Passwords do not match"$FORMAT_END
+        echo $BOLD_RED"   Passwords do not match"$FORMAT_END
         continue
       fi
 
       save "$name" "$value"
       break
     else
-      echo $BOLD$RED"Unknown variable type"$FORMAT_END
+      echo $BOLD_RED"Unknown variable type"$FORMAT_END
       exit 1
     fi
   done

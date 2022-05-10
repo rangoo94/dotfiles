@@ -1,12 +1,15 @@
 #!/bin/bash
 
-brew update
-brew upgrade
-brew tap homebrew/cask-versions
-brew tap colindean/fonts-nonfree
-
 # Initialize scripts
 source "$(dirname "${BASH_SOURCE[0]}")/_init.sh"
+
+# Show step information
+header "Install Homebrew packages"
+
+# Set up basics
+
+brew update
+brew upgrade
 
 # Detect installed apps
 

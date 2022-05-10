@@ -8,6 +8,16 @@ macos() {
   fi
 }
 
+
+# CLI
+
+BOLD_CYAN=$'\e[1;36m'
+FORMAT_END=$'\e[0m'
+
+header() {
+  echo $'\n'$BOLD_CYAN"======= $1 ======="$FORMAT_END$'\n'
+}
+
 # Operations
 
 add_to_bash_profile() {
