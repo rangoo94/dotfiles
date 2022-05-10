@@ -14,9 +14,7 @@ if ! xcode-select --print-path &> /dev/null; then
   until xcode-select --print-path &> /dev/null; do
     sleep 5
   done
-
-  if [[ -x "/Applications/Xcode.app" ]]; then
-    sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
-    sudo xcodebuild -license accept
-  fi
 fi
+
+sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+sudo xcodebuild -license accept
