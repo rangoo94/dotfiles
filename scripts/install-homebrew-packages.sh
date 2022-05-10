@@ -39,3 +39,4 @@ if [[ "$HAD_ADOBE_CC_INSTALLED" == "0" ]]; then
 fi
 
 add_to_bash_profile "Ruby Path" "export PATH=\"/usr/local/opt/ruby/bin:\$PATH\""
+add_to_bash_profile "Open SSL Path" "export PATH=\"/usr/local/opt/openssl@3/bin:\$PATH\""
