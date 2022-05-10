@@ -6,7 +6,7 @@ set -e
 cd "$(dirname "$0")"
 
 # Confirm configuration
-. ./configure.sh
+. ./scripts/_init.sh
 
 # Ensure proper accesses
 if is_macos; then
