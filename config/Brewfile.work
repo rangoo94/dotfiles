@@ -9,6 +9,7 @@ brew "mas"
 cask_args appdir: "~/Applications"
 
 # Tooling
+brew "watchman"
 brew "autoconf"
 brew "pkg-config"
 brew "graphviz"
