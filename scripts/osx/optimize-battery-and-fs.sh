@@ -8,13 +8,17 @@ header "OSX: Optimize battery and FS"
 
 # Optimize battery in OSX, speed up FS
 
-sudo curl https://raw.githubusercontent.com/wilsonmar/mac-setup/431b452d8538e1a3a4e9d2e187c2b1a4d98f0a46/configs/limit.maxfiles.plist > limit.maxfiles.plist
-sudo mv limit.maxfiles.plist /Library/LaunchDaemons/limit.maxfiles.plist
+if [[ ! -f "/Library/LaunchDaemons/limit.maxfiles.plist" ]]; then
+  sudo curl https://raw.githubusercontent.com/wilsonmar/mac-setup/431b452d8538e1a3a4e9d2e187c2b1a4d98f0a46/configs/limit.maxfiles.plist > limit.maxfiles.plist
+  sudo mv limit.maxfiles.plist /Library/LaunchDaemons/limit.maxfiles.plist
+fi
 sudo chmod 644 /Library/LaunchDaemons/limit.maxfiles.plist
 sudo chown root:wheel /Library/LaunchDaemons/limit.maxfiles.plist
 
-sudo curl https://raw.githubusercontent.com/wilsonmar/mac-setup/431b452d8538e1a3a4e9d2e187c2b1a4d98f0a46/configs/limit.maxproc.plist > limit.maxproc.plist
-sudo mv limit.maxproc.plist /Library/LaunchDaemons/limit.maxproc.plist
+if [[ ! -f "/Library/LaunchDaemons/limit.maxproc.plist" ]]; then
+  sudo curl https://raw.githubusercontent.com/wilsonmar/mac-setup/431b452d8538e1a3a4e9d2e187c2b1a4d98f0a46/configs/limit.maxproc.plist > limit.maxproc.plist
+  sudo mv limit.maxproc.plist /Library/LaunchDaemons/limit.maxproc.plist
+fi
 sudo chmod 644 /Library/LaunchDaemons/limit.maxproc.plist
 sudo chown root:wheel /Library/LaunchDaemons/limit.maxproc.plist
 
