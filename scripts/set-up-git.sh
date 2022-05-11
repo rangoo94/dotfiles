@@ -9,3 +9,4 @@ header "Set up Git"
 # Configure Git
 git config --global user.name "$GIT_NAME"
 git config --global user.email "$GIT_EMAIL"
+git config --global init.defaultBranch "master"
