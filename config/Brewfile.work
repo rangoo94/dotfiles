@@ -47,6 +47,7 @@ cask "burp-suite"
 
 # Graphics
 cask "sketch"
+cask "affinity-publisher"
 
 # Browsers
 cask "tor-browser"
