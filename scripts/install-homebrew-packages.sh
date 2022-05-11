@@ -10,6 +10,7 @@ header "Install Homebrew packages"
 
 brew update
 brew upgrade
+mas upgrade
 
 # Detect installed apps
 
