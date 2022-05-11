@@ -29,3 +29,15 @@ add_to_bashrc "Docker aliases" "
     docker-compose restart \$@
   }
 "
+
+# Dotfiles
+
+add_to_bashrc "Dotfiles" "
+  dotfiles_run() {
+    sh -c "`curl -fsSL https://raw.github.com/rangoo94/dotfiles/master/remote-setup.sh`"
+  }
+
+  dotfiles_cd() {
+    cd ~/dotfiles
+  }
+"
