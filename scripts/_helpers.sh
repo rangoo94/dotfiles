@@ -20,12 +20,14 @@ header() {
 
 # Operations
 
-add_to_bash_profile() {
-  # "name" "snippet"
-  bash_profile_path="$HOME/.bash_profile"
-  comment_start="# ---- START: $1 ---- #"
-  comment_end="# ---- END:   $1 ---- #"
-  snippet="$comment_start"$'\n'"$2"$'\n'"$comment_end"
+add_to_file() {
+  # "real_file_path" "name" "snippet"
+  real_file_path="$1"
+  comment_start="# ---- START: $2 ---- #"
+  comment_end="# ---- END:   $2 ---- #"
+  snippet="$comment_start"$'\n'"$3"$'\n'"$comment_end"
+
+  touch "$real_file_path"
 
   found_block=$(ruby -e "
     content = File.read(ARGV[2])
@@ -36,20 +38,32 @@ add_to_bash_profile() {
     if results.length > 0
       print(results[0])
     end
-  " "$comment_start" "$comment_end" "$bash_profile_path")
+  " "$comment_start" "$comment_end" "$real_file_path")
   if [[ $found_block == "" ]]; then
-    if [ -s "$bash_profile_path" ]; then
-      echo $'\n'"$snippet" >> $bash_profile_path
+    if [ -s "$real_file_path" ]; then
+      echo $'\n'"$snippet" >> $real_file_path
     else
-      echo "$snippet" >> $bash_profile_path
+      echo "$snippet" >> $real_file_path
     fi
   else
     ruby -e "
       content = File.read(ARGV[2])
       new_content = content.gsub(ARGV[0], ARGV[1])
       File.open(ARGV[2], 'w') {|file| file.puts(new_content) }
-    " "$found_block" "$snippet" "$bash_profile_path"
+    " "$found_block" "$snippet" "$real_file_path"
   fi
+}
+
+setup_bashrc() {
+  add_to_file "$HOME/.bash_profile" "Load .bashrc" "source ~/.bashrc"
+  add_to_file "$HOME/.zshenv" "Load .bashrc" "source ~/.bashrc"
+  add_to_file "$HOME/.zshrc" "Load .bashrc" "source ~/.bashrc"
+}
+
+add_to_bashrc() {
+  # "name" "snippet"
+  setup_bashrc
+  add_to_file "$HOME/.bashrc" "$1" "$2"
 }
 
 reboot() {

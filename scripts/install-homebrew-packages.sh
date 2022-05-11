@@ -38,5 +38,5 @@ if [[ "$HAD_ADOBE_CC_INSTALLED" == "0" ]]; then
   open "/usr/local/Caskroom/adobe-creative-cloud/latest/Creative Cloud Installer.app" || echo "OK"
 fi
 
-add_to_bash_profile "Ruby Path" "export PATH=\"/usr/local/opt/ruby/bin:\$PATH\""
-add_to_bash_profile "Open SSL Path" "export PATH=\"/usr/local/opt/openssl@3/bin:\$PATH\""
+add_to_bashrc "Ruby Path" "export PATH=\"/usr/local/opt/ruby/bin:\$PATH\""
+add_to_bashrc "Open SSL Path" "export PATH=\"/usr/local/opt/openssl@3/bin:\$PATH\""

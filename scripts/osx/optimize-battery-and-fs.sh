@@ -38,7 +38,7 @@ grep -qxF 'kern.maxfiles=5242880' /etc/sysctl.conf || echo 'kern.maxfiles=524288
 grep -qxF 'kern.maxfilesperproc=524288' /etc/sysctl.conf || echo 'kern.maxfilesperproc=524288' | sudo tee -a /etc/sysctl.conf
 grep -qxF 'net.inet.tcp.msl=1000' /etc/sysctl.conf || echo 'net.inet.tcp.msl=1000' | sudo tee -a /etc/sysctl.conf
 
-add_to_bash_profile "Change ulimits" "
+add_to_bashrc "Change ulimits" "
   ulimit -n 65536 200000
   ulimit -u 2048
   ulimit -S -n 65535

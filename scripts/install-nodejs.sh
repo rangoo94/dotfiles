@@ -13,7 +13,7 @@ sudo chown -R $(whoami) /usr/local/lib/pkgconfig
 brew install nvm
 nvm install 18
 nvm alias default 18
-add_to_bash_profile "NVM Setup" "
+add_to_bashrc "NVM Setup" "
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
 "
