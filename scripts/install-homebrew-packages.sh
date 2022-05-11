@@ -9,7 +9,7 @@ header "Install Homebrew packages"
 # Set up basics
 
 brew update
-brew upgrade
+brew upgrade || echo "Ignored 'brew upgrade' failure"
 
 # Detect installed apps
 
