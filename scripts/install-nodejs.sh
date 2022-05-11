@@ -11,11 +11,16 @@ header "Install Node.js"
 sudo chown -R $(whoami) /usr/local/lib/pkgconfig
 
 brew install nvm
-nvm install 18
-nvm alias default 18
+nvm install "$NODE_VERSION" --default
 add_to_bashrc "NVM Setup" "
   export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh
+  export PATH=\"\$NVM_DIR/versions/node/$(nvm version "$NODE_VERSION")/bin:\$PATH\"
+
+  nvm() {
+    unset -f nvm
+    source $(brew --prefix nvm)/nvm.sh
+    nvm \$@
+  }
 "
 
 # Install NPM packages
