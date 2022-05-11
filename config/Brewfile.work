@@ -69,3 +69,5 @@ cask "ngrok"
 
 # Communication
 cask "slack"
+cask "bluejeans"
+cask "zoom"
