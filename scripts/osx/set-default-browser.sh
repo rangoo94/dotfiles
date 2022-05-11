@@ -28,4 +28,4 @@ on run
 end run
   "
 }
-set_default_browser kokokokok || set_default_browser canary || set_default_browser chrome
+set_default_browser canary || set_default_browser chrome
