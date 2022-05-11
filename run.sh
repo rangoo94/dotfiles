@@ -45,6 +45,9 @@ fi
 # Set up Git user
 . ./scripts/set-up-git.sh
 
+# Set up aliases
+. ./scripts/aliases.sh
+
 # Reboot
 
 reboot () {
