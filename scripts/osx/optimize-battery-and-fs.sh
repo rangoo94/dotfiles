@@ -30,6 +30,7 @@ sudo sysctl -w kern.maxfiles=5242880
 sudo sysctl -w kern.maxfilesperproc=524288
 sudo sysctl -w net.inet.tcp.msl=1000
 ulimit -S -n 65535
+ulimit -f unlimited
 
 sudo touch /etc/sysctl.conf
 
@@ -41,6 +42,7 @@ add_to_bash_profile "Change ulimits" "
   ulimit -n 65536 200000
   ulimit -u 2048
   ulimit -S -n 65535
+  ulimit -f unlimited
 "
 
 # https://www.lifewire.com/terminal-tricks-to-speed-up-your-mac-4120954
