@@ -19,6 +19,7 @@ fi
 if macos; then
   . ./scripts/osx/configure-defaults.sh
   . ./scripts/osx/optimize-battery-and-fs.sh
+  . ./scripts/osx/set-hostnames.sh
 fi
 
 # Install Homebrew
