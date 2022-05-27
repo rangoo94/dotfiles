@@ -30,6 +30,9 @@ fi
 
 # Install some packages
 if macos; then
+  if [[ "$HAS_TOUCHBAR" == "true" ]]; then
+    . ./scripts/osx/configure-touchbar.sh
+  fi
   . ./scripts/osx/install-xcode.sh
 fi
 . ./scripts/install-homebrew-packages.sh
