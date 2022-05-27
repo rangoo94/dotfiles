@@ -10,6 +10,8 @@ cask_args appdir: "/Applications"
 
 # Basics
 
+brew "nano"
+brew "micro"
 brew "openjdk"
 brew "git"
 brew "git-lfs"
