@@ -15,6 +15,9 @@ fi
 
 . ./scripts/ensure-access.sh
 
+# Create basic directories
+. ./scripts/create-directories.sh
+
 # Configure OSX
 if macos; then
   . ./scripts/osx/configure-defaults.sh
