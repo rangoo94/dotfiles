@@ -43,6 +43,11 @@ if [[ "$IS_WORK" == "true" ]]; then
   . ./scripts/install-nodejs.sh
 fi
 
+# Set-up additional tools
+if [[ "$IS_WORK" == "true" ]]; then
+  . ./scripts/install-tools.sh
+fi
+
 # Set default browser to Google Chrome or Google Chrome Canary
 if macos; then
   . ./scripts/osx/set-default-browser.sh
