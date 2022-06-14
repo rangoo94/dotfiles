@@ -12,8 +12,8 @@ header "Install Sherlock"
 
 # Install Sherlock
 
-git clone https://github.com/sherlock-project/sherlock.git ~/tools/sherlock || cd ~/tools/sherlock && git pull
 CURRENT_DIR="$(pwd)"
+git clone https://github.com/sherlock-project/sherlock.git ~/tools/sherlock || cd ~/tools/sherlock && git pull
 cd ~/tools/sherlock && python3 -m pip install -r requirements.txt && cd "$CURRENT_DIR"
 add_to_bashrc "Sherlock alias" "
   sherlock() {
