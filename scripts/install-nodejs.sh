@@ -26,8 +26,7 @@ add_to_bashrc "NVM Setup" "
 # Automatically use .nvmrc
 
 add_to_bashrc "Auto .nvmrc" "
-  cd() {
-    builtin cd \"\$@\"
+  nvm_use() {
     if [ -f \".nvmrc\" ]; then
       CD_NVMRC_VERSION=\"\$(cat .nvmrc | sed 's/[[:blank:]]//g' | sed 's/v//g')\"
       CD_NODE_VERSION=\"\$(node -v | sed 's/[[:blank:]]//g' | sed 's/v//g')\"
@@ -38,8 +37,11 @@ add_to_bashrc "Auto .nvmrc" "
       fi
     fi
   }
-
-  cd \"\$(pwd)\"
+  cd() {
+    builtin cd \"\$@\"
+    nvm_use
+  }
+  nvm_use
 "
 
 # Install NPM packages
