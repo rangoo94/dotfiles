@@ -23,6 +23,25 @@ add_to_bashrc "NVM Setup" "
   }
 "
 
+# Automatically use .nvmrc
+
+add_to_bashrc "Auto .nvmrc" "
+  cd() {
+    builtin cd \"\$@\"
+    if [ -f \".nvmrc\" ]; then
+      CD_NVMRC_VERSION=\"\$(cat .nvmrc | sed 's/[[:blank:]]//g' | sed 's/v//g')\"
+      CD_NODE_VERSION=\"\$(node -v | sed 's/[[:blank:]]//g' | sed 's/v//g')\"
+      if [[ \"\$CD_NVMRC_VERSION\" == \"\$CD_NODE_VERSION\" ]]; then
+        echo -e \$'\e[1;36m'\"[.nvmrc]\"\$'\e[0;37m'\" Using already Node.js v\$CD_NVMRC_VERSION\"\$'\e[0m'
+      else
+        nvm use \"\$CD_NVMRC_VERSION\" > >(sed -e 's/^/[.nvmrc] /;') 2>&1 || (echo -e \$'\e[1;31m'\"[.nvmrc] \"\$'\e[0m'$'\e[0;31m'\"You need to install Node.js v\$CD_NVMRC_VERSION for this project\"\$'\e[0m')
+      fi
+    fi
+  }
+
+  cd \"\$(pwd)\"
+"
+
 # Install NPM packages
 
 npm i -g \
