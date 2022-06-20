@@ -35,4 +35,7 @@ npm i -g \
   localtunnel \
   madge \
   available-domains \
-  namelix-cli
+  namelix-cli \
+  yarn \
+  nx \
+  @funboxteam/optimizt
