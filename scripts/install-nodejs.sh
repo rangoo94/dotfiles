@@ -38,8 +38,7 @@ add_to_bashrc "Auto .nvmrc" "
     fi
   }
   cd() {
-    builtin cd \"\$@\"
-    nvm_use
+    builtin cd \"\$@\" && nvm_use
   }
   nvm_use
 "
