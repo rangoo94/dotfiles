@@ -58,4 +58,6 @@ npm i -g \
   namelix-cli \
   yarn \
   nx \
+  create-next-app \
+  ts-node \
   @funboxteam/optimizt
