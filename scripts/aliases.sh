@@ -77,7 +77,7 @@ add_to_bashrc "Swagger UI" "
     trap \"docker rm -f \$CONTAINER_ID\" EXIT
 
     sleep 1
-    open \"http://localhost:$PORT\"
+    open \"http://localhost:\$PORT\"
 
     docker logs -f \"\$CONTAINER_ID\"
   }
