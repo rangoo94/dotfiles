@@ -17,9 +17,9 @@ brew "graphviz"
 brew "apktool"
 brew "jpegoptim"
 brew "ffmpeg"
-cask "toggl-track"
 cask "android-platform-tools"
 mas "Amphetamine", id: 937984704
+mas "Toggl Track", id: 1291898086
 
 # Databases
 brew "mongodb-community-shell"
