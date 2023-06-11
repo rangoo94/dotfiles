@@ -41,3 +41,7 @@ fi
 
 add_to_bashrc "Ruby Path" "export PATH=\"/usr/local/opt/ruby/bin:\$PATH\""
 add_to_bashrc "Open SSL Path" "export PATH=\"/usr/local/opt/openssl@3/bin:\$PATH\""
+
+if [[ "$IS_WORK" == "true" ]]; then
+  add_to_bashrc "Golang Path" "export PATH=\"\$(go env GOPATH)/bin:\$PATH\""
+fi

@@ -43,6 +43,23 @@ add_to_bashrc "Auto .nvmrc" "
   nvm_use
 "
 
+# Add aliases for common commands
+
+add_to_bashrc "Common NPM commands" "
+  ns() {
+    npm start \$@
+  }
+
+  kn() {
+    killall -9 node
+  }
+
+  npmreset() {
+    find . -name \"node_modules\" -exec rm -rf '{}' +
+    git checkout HEAD package-lock.json
+  }
+"
+
 # Install NPM packages
 
 npm i -g \
@@ -60,4 +77,5 @@ npm i -g \
   nx \
   create-next-app \
   ts-node \
+  nodemon \
   @funboxteam/optimizt
