@@ -1,0 +1,64 @@
+tap "colindean/fonts-nonfree"
+
+# Core
+
+brew "nano"
+brew "openjdk"
+brew "git"
+brew "git-lfs"
+brew "jq"
+brew "yq"
+brew "base64"
+brew "openssl@3"
+brew "brotli"
+brew "coreutils"
+brew "findutils"
+brew "gnu-time"
+brew "gnu-tar"
+brew "gnu-sed"
+brew "gawk"
+brew "gnutls"
+brew "gnu-indent"
+brew "gnu-getopt"
+brew "grep"
+brew "ruby"
+brew "python3"
+brew "tree"
+brew "zsh"
+cask "font-microsoft-office"
+cask "iterm2"
+
+# Browsers
+
+cask "google-chrome"
+
+# Documents & Graphics
+
+cask "adobe-acrobat-reader"
+cask "adobe-creative-cloud"
+cask "gimp"
+cask "affinity-photo"
+cask "affinity-designer"
+mas "Keynote", id: 409183694
+mas "The Unarchiver", id: 425424353
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Word", id: 462054704
+
+# Time tracking
+
+mas "TickTick:To-Do List, Calendar", id: 966085870
+mas "Toggl Track: Hours & Time Log", id: 1291898086
+
+# Communication
+
+cask "discord"
+cask "slack"
+
+# Entertainment
+
+cask "spotify"
+cask "vlc"
+
+# Diagnostics
+
+cask "teamviewer"

@@ -32,26 +32,6 @@ sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/rango
 Either [generate](https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html) new keys,
 or put existing to `~/.ssh` directory. 
 
-### Set-up Chrome
-
-* Set up 2 profiles in Google Chrome: "Basic" and "Developer"
-* Install extensions on both profiles
-   * [Disconnect](https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo)
-   * [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen)
-   * [JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
-   * [OctoLinker](https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp)
-   * [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
-* Install extensions on "Dev" profile
-   * [DOMListener](https://github.com/kdzwinel/DOMListenerExtension)
-   * [Full Page Screen Capture](https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl)
-   * [Perfmap](https://chrome.google.com/webstore/detail/perfmap/hgpnhiajcdppfbogcpfdgcceepgkhdmk)
-   * [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-   * [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
-   * [Tag Assistant (by Google)](https://chrome.google.com/webstore/detail/tag-assistant-by-google/kejbdjndbnbjgmefkgdddjlbokphdefk)
-   * [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-   * [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm)
-   * [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln)
-
 ## Set-up JetBrains IDEs
 
 * Log in to JetBrains Toolkit
@@ -81,7 +61,7 @@ Including:
 * Configure Touchbar to show "brightness slider" and "mute" natively
 * Set up [BetterTouchTool](https://folivora.ai/) license
 * Import [`rangoo94.bttpreset`](assets/rangoo94.bttpreset) into BTT
-* Install [`btt-toggl`](https://www.npmjs.com/package/btt-toggl) NPM package, configure it and set up proper script in "Toggl"
+* Install [`btt-toggl`](https://www.npmjs.com/package/btt-toggl) NPM package, fix it, configure it and set up proper script in "Toggl"
 
 ## Other stuff
 

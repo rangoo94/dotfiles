@@ -1,16 +1,9 @@
 # Tap definitions
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
-tap "buo/cask-upgrade"
-tap "colindean/fonts-nonfree"
+tap "owasp-amass/amass"
 tap "mongodb/brew"
-brew "mas"
-
-# Configure
-cask_args appdir: "/Applications"
 
 # Tooling
-brew "watchman"
 brew "autoconf"
 brew "pkg-config"
 brew "graphviz"
@@ -19,7 +12,6 @@ brew "jpegoptim"
 brew "ffmpeg"
 cask "android-platform-tools"
 mas "Amphetamine", id: 937984704
-mas "Toggl Track", id: 1291898086
 
 # Databases
 brew "mongodb-community-shell"
@@ -29,7 +21,6 @@ brew "pgcli"
 # Programming
 brew "nvm"
 brew "v8"
-brew "python3"
 brew "go"
 brew "pipenv"
 brew "pyenv"
@@ -48,7 +39,6 @@ cask "zenmap"
 cask "burp-suite"
 
 # Graphics
-cask "sketch"
 cask "affinity-publisher"
 
 # Browsers
@@ -65,6 +55,8 @@ brew "siege"
 brew "gitleaks"
 brew "tcpdump"
 brew "terraform"
+brew "kubernetes-cli"
+brew "testkube"
 brew "skopeo"
 cask "docker"
 cask "openlens"
@@ -74,6 +66,5 @@ cask "virtualbox"
 cask "ngrok"
 
 # Communication
-cask "slack"
 cask "bluejeans"
 cask "zoom"
