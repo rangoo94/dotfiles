@@ -38,10 +38,13 @@ or put existing to `~/.ssh` directory.
 * Install IntelliJ, WebStorm, CLion, GoLand, PyCharm Professional and DataGrip
 * Install Material Theme UI, and set theme to Material Darker
 * Install plugins, i.e.
-   * [Wallaby.js](https://wallabyjs.com/download/)
-   * .ignore
-   * Quokka
-   * BashSupport
+  * React Buddy
+  * Quokka
+  * [Wallaby.js](https://wallabyjs.com/download/)
+  * Protocol Buffers
+  * GraphQL
+  * ANTLR v4
+  * .ignore
 
 ## Set-up licenses and log in to
 
