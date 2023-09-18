@@ -88,6 +88,9 @@ if macos; then
   defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
   # Other
+  defaults write -g AppleReduceDesktopTinting -bool yes
+
+  # Manual
   postinstructions_add "battery" "Enable displaying battery percentage in the menubar"
 
   success "Done."
