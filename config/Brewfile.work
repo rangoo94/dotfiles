@@ -63,7 +63,7 @@ cask "docker"
 cask "openlens"
 cask "wireshark"
 cask "vagrant"
-cask "virtualbox"
+# cask "virtualbox" # intel-only
 cask "ngrok"
 
 # Communication

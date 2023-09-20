@@ -6,6 +6,9 @@ if variable_is_true "IS_WORK"; then
   # Install apps
 
   brew bundle --file="$(dirname "${BASH_SOURCE[0]}")/../config/Brewfile.work"
+  if [[ $(uname -m) != 'arm64' ]]; then
+    brew bundle --file="$(dirname "${BASH_SOURCE[0]}")/../config/Brewfile.work.intel-only"
+  fi
 
   # Register the apps
 
