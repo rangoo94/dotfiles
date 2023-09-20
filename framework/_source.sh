@@ -66,7 +66,7 @@ bashrc_pkgconfig_add() {
   bashrc_snippet "$1 - pkgconfig" "if [ -z \"\$PKG_CONFIG_PATH\" ]; then
   PKG_CONFIG_PATH=\"$2\"
 else
-  PKG_CONFIG_PATH=\"$2:$PKG_CONFIG_PATH\"
+  PKG_CONFIG_PATH=\"$2:\$PKG_CONFIG_PATH\"
 fi"
 }
 
