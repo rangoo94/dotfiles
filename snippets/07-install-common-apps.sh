@@ -6,7 +6,7 @@ header "Homebrew: install commons"
 
 HOMEBREW_DIR=/usr/local
 if [[ $(uname -m) == 'arm64' ]]; then
-  HOMEBREW_BIN=/opt/homebrew
+  HOMEBREW_DIR=/opt/homebrew
 fi
 
 # Install apps
