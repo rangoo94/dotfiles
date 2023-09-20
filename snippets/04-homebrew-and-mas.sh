@@ -2,16 +2,22 @@
 
 header "Install Homebrew"
 
+# It differs on Apple M
+HOMEBREW_BIN=/usr/local/bin/brew
+if [[ $(uname -m) == 'arm64' ]]; then
+  HOMEBREW_BIN=/opt
+fi
+
 if ! [[ -x "$(command -v brew)" ]]; then
   echo "Installing Homebrew..."
   HOMEBREW_NO_ANALYTICS=1 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  eval "$(/usr/local/bin/brew shellenv)"
+  eval "$($HOMEBREW_BIN shellenv)"
   success "Homebrew installed."
 else
   success "Homebrew already installed."
 fi
 
-git config --global --add safe.directory /usr/local/Homebrew
+git config --global --add safe.directory "$(brew --prefix)"
 
 sudo dscl . create /Groups/homebrew
 sudo dscl . -create /Groups/homebrew gid 799
@@ -33,4 +39,4 @@ elif macos; then
   success "Mac App Store CLI already installed."
 fi
 
-bashrc_snippet "Init Homebrew" 'eval "$(/usr/local/bin/brew shellenv)"'
+bashrc_snippet "Init Homebrew" "eval \"\$($HOMEBREW_BIN shellenv)\""

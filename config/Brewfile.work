@@ -2,6 +2,7 @@
 tap "homebrew/cask-versions"
 tap "owasp-amass/amass"
 tap "mongodb/brew"
+tap "datawire/blackbird"
 
 # Tooling
 brew "autoconf"
