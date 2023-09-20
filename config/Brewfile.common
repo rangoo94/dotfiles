@@ -62,3 +62,7 @@ cask "vlc"
 # Diagnostics
 
 cask "teamviewer"
+
+# Network
+
+cask "tailscale"
