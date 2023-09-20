@@ -9,6 +9,6 @@ success "Machine configured."
 
 if [[ $(uname -m) == 'arm64' ]]; then
   header "Install Rosetta"
-  sudo softwareupdate --install-rosetta
+  sudo softwareupdate --install-rosetta --agree-to-license
   success "Rosetta installed."
 fi
