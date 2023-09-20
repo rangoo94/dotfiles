@@ -3,6 +3,7 @@
 if variable_is_true "IS_WORK"; then
   header "Setup Docker environment"
 
+  source ~/.bashrc
   gem install docker-sync
 
   bashrc_snippet "Docker aliases" "

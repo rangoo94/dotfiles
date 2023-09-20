@@ -1,9 +1,7 @@
 #!/bin/bash
 
 if variable_is_true "IS_WORK"; then
-  header "Setup Docker environment"
-
-  gem install docker-sync
+  header "Setup Swagger helpers"
 
   bashrc_snippet "Unused port" "
     unused_port() {
