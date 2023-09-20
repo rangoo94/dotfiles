@@ -6,8 +6,9 @@ git config --global user.name "$(variable_get GIT_NAME)"
 git config --global user.email "$(variable_get GIT_EMAIL)"
 git config --global init.defaultBranch "main"
 
+git config --global commit.gpgsign true
 git config --global gpg.format ssh
-git config --global user.signingkey ~/.ssh/id_rsa.pub
+git config --global user.signingkey $HOME/.ssh/id_rsa.pub
 mkdir -p ~/.ssh
 touch ~/.ssh/config
 if ! grep -q "Host github.com" "$HOME/.ssh/config"; then
