@@ -2,6 +2,13 @@
 
 header "Homebrew: install commons"
 
+# Detect Homebrew directory
+
+HOMEBREW_DIR=/usr/local
+if [[ $(uname -m) == 'arm64' ]]; then
+  HOMEBREW_BIN=/opt/homebrew
+fi
+
 # Install apps
 
 brew bundle --file="$(dirname "${BASH_SOURCE[0]}")/../config/Brewfile.common"
@@ -9,17 +16,17 @@ brew bundle --file="$(dirname "${BASH_SOURCE[0]}")/../config/Brewfile.common"
 # Register the apps
 
 # openjdk
-sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-bashrc_cppflags_add "OpenJDK" "-I/usr/local/opt/openjdk/include"
-bashrc_path_add "OpenJDK" "/usr/local/opt/openjdk/bin"
+sudo ln -sfn $HOMEBREW_DIR/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+bashrc_cppflags_add "OpenJDK" "-I$HOMEBREW_DIR/opt/openjdk/include"
+bashrc_path_add "OpenJDK" "$HOMEBREW_DIR/opt/openjdk/bin"
 
 # git-lfs
 git lfs install
 
 # ruby
-bashrc_path_add "Ruby" "/usr/local/opt/ruby/bin"
-bashrc_ldflags_add "Ruby" "-L/usr/local/opt/ruby/lib"
-bashrc_cppflags_add "Ruby" "-I/usr/local/opt/ruby/include"
+bashrc_path_add "Ruby" "$HOMEBREW_DIR/opt/ruby/bin"
+bashrc_ldflags_add "Ruby" "-L$HOMEBREW_DIR/opt/ruby/lib"
+bashrc_cppflags_add "Ruby" "-I$HOMEBREW_DIR/opt/ruby/include"
 
 # zsh
 if ! [ -d ~/.oh-my-zsh ]; then

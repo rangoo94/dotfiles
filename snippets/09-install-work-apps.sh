@@ -3,6 +3,13 @@
 if variable_is_true "IS_WORK"; then
   header "Homebrew: install work"
 
+  # Detect Homebrew directory
+
+  HOMEBREW_DIR=/usr/local
+  if [[ $(uname -m) == 'arm64' ]]; then
+    HOMEBREW_BIN=/opt/homebrew
+  fi
+
   # Install apps
 
   brew bundle --file="$(dirname "${BASH_SOURCE[0]}")/../config/Brewfile.work"
@@ -13,10 +20,10 @@ if variable_is_true "IS_WORK"; then
   # Register the apps
 
   # libpq
-  bashrc_path_add "libpq" "/usr/local/opt/libpq/bin"
-  bashrc_ldflags_add "libpq" "-L/usr/local/opt/libpq/lib"
-  bashrc_cppflags_add "libpq" "-I/usr/local/opt/libpq/include"
-  bashrc_pkgconfig_add "libpq" "/usr/local/opt/libpq/lib/pkgconfig"
+  bashrc_path_add "libpq" "$HOMEBREW_DIR/opt/libpq/bin"
+  bashrc_ldflags_add "libpq" "-L$HOMEBREW_DIR/opt/libpq/lib"
+  bashrc_cppflags_add "libpq" "-I$HOMEBREW_DIR/opt/libpq/include"
+  bashrc_pkgconfig_add "libpq" "$HOMEBREW_DIR/opt/libpq/lib/pkgconfig"
 
   # go
   bashrc_snippet "Golang Path" "export PATH=\"\$(go env GOPATH)/bin:\$PATH\""
