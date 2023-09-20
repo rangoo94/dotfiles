@@ -5,7 +5,7 @@ header "Install Homebrew"
 # It differs on Apple M
 HOMEBREW_BIN=/usr/local/bin/brew
 if [[ $(uname -m) == 'arm64' ]]; then
-  HOMEBREW_BIN=/opt
+  HOMEBREW_BIN=/opt/homebrew/bin/brew
 fi
 
 if ! [[ -x "$(command -v brew)" ]]; then
