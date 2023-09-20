@@ -22,8 +22,7 @@ if macos; then
   sudo launchctl load -w /Library/LaunchDaemons/limit.maxproc.plist
 
   sudo ulimit -n 65536 200000
-  sudo launchctl limit maxfiles 256 unlimited
-  sudo launchctl limit maxfiles 5242880 5242880
+  sudo launchctl limit maxfiles 256 unlimited && sudo launchctl limit maxfiles 5242880 5242880 || postinstructions_add "launchctl limit maxfiles" "Change limits with SIP disabled"
 
   sudo sysctl -w kern.maxfiles=5242880
   sudo sysctl -w kern.maxfilesperproc=5242880
