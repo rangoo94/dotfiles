@@ -4,6 +4,7 @@ if variable_is_true "IS_WORK"; then
   header "Install Google Cloud CLI"
 
   brew install --cask google-cloud-sdk
+  gcloud components install -q gke-gcloud-auth-plugin
 
   bashrc_snippet "Google Cloud CLI" "
     if [ -n \"\$ZSH_VERSION\" ]; then
