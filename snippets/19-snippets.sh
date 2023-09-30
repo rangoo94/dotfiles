@@ -41,3 +41,40 @@ bashrc_snippet "Watch Bash command" "
     eval \$args bash -c \$ev
   }
 "
+
+bashrc_snippet "Watch Bash command diff" "
+  watchdiff() {
+    Q='\"'
+    TITLE=\"\$(echo \$@)\"
+
+    PREV_RESULT=\"\$(eval \$@)\"
+    echo \$'\e[0;37m'\"\$(date +\"%Y-%m-%dT%H:%M:%S%z\")\"\$'\e[0m'\" \$(echo \"\$PREV_RESULT\" | sed 's/^/                         /' | sed '1 s/^                         //')\"
+    while sleep 1; do
+      RESULT=\$(eval \$@)
+      if [ \"\$RESULT\" != \"\$PREV_RESULT\" ]; then
+        echo \$'\e[0;37m'\"\$(date +\"%Y-%m-%dT%H:%M:%S%z\")\"\$'\e[0m'\" \$(echo \"\$RESULT\" | sed 's/^/                         /' | sed '1 s/^                         //')\"
+        PREV_RESULT=\"\$RESULT\"
+
+        DESCRIPTION=\"\$RESULT\"
+        if [[ -x \"\$(command -v osascript)\" ]]; then
+          osascript -e \"display notification \${Q}\$(echo \"\$DESCRIPTION\" | sed 's/\\\\/\\\\\\\\/g' | sed 's/\\\"/\\\\\"/g')\${Q} with title \${Q}\$(echo \"\$TITLE\" | sed 's/\\\\/\\\\\\\\/g' | sed 's/\\\"/\\\\\"/g')\${Q}\"
+        fi
+      fi
+    done
+  }
+
+  watchdiff_silent() {
+    Q='\"'
+    TITLE=\"\$(echo \$@)\"
+
+    PREV_RESULT=\"\$(eval \$@)\"
+    echo \$'\e[0;37m'\"\$(date +\"%Y-%m-%dT%H:%M:%S%z\")\"\$'\e[0m'\" \$(echo \"\$PREV_RESULT\" | sed 's/^/                         /' | sed '1 s/^                         //')\"
+    while sleep 1; do
+      RESULT=\$(eval \$@)
+      if [ \"\$RESULT\" != \"\$PREV_RESULT\" ]; then
+        echo \$'\e[0;37m'\"\$(date +\"%Y-%m-%dT%H:%M:%S%z\")\"\$'\e[0m'\" \$(echo \"\$RESULT\" | sed 's/^/                         /' | sed '1 s/^                         //')\"
+        PREV_RESULT=\"\$RESULT\"
+      fi
+    done
+  }
+"
