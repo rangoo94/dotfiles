@@ -16,7 +16,14 @@ bashrc_snippet "User memory and CPU" "
 bashrc_snippet "Watch Bash command" "
   watchb() {
     q=$'\"'
-    cmd=\"\$(printf %q \"bash -c \${q}source ~/.bashrc; \${@: -1}\${q}\")\"
-    eval watch \${@: 1:\$#-1} \$cmd
+    args=\"\"
+    prev=\"watch\"
+    for arg in \"\$@\"; do
+      args=\"\$args\$(printf \"%q \" \"\$prev\")\"
+      prev=\"\$arg\"
+    done
+    inner=\"\$(printf %q \"source ~/.bashrc; \${arg}\")\"
+    cmd=\"\$(printf %q \"bash -c \$inner\")\"
+    eval \$args \$cmd
   }
 "
