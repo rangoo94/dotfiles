@@ -17,13 +17,12 @@ else
   success "Homebrew already installed."
 fi
 
-git config --global --add safe.directory "$(brew --prefix)"
-
 sudo dscl . create /Groups/homebrew
 sudo dscl . -create /Groups/homebrew gid 799
 sudo dscl . -append /Groups/homebrew GroupMembership "$(whoami)"
-sudo chgrp -R homebrew $(brew --prefix)/* &> /dev/null || true
-sudo chmod -R g+w $(brew --prefix)/* &> /dev/null || true
+sudo chgrp -R homebrew "$(brew --prefix)" &> /dev/null || true
+sudo chmod -R g+w "$(brew --prefix)" &> /dev/null || true
+find "$(brew --prefix)" -name '.git' -type d -exec bash -c 'git config --global --add safe.directory ${0%/.git}' {} \;
 success "Updated Homebrew permissions."
 
 brew analytics off
