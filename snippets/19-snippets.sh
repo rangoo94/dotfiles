@@ -12,3 +12,11 @@ bashrc_snippet "User memory and CPU" "
     ) | column -t
   }
 "
+
+bashrc_snippet "Watch Bash command" "
+  watchb() {
+    q=$'\"'
+    cmd=\"\$(printf %q \"bash -c \${q}source ~/.bashrc; \${@: -1}\${q}\")\"
+    eval watch \${@: 1:\$#-1} \$cmd
+  }
+"
