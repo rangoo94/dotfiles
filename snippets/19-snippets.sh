@@ -16,14 +16,28 @@ bashrc_snippet "User memory and CPU" "
 bashrc_snippet "Watch Bash command" "
   watchb() {
     q=$'\"'
-    args=\"\"
-    prev=\"watch\"
+    cmd=\"\"
+    args=\"watch \"
+    was_opt=\"0\"
+    is_cmd=\"0\"
     for arg in \"\$@\"; do
-      args=\"\$args\$(printf \"%q \" \"\$prev\")\"
-      prev=\"\$arg\"
+      if [ \"\$is_cmd\" -eq \"0\" ]; then
+        if [[ \"\$arg\" = -* ]]; then
+          args=\"\$args\$(printf \"%q \" \"\$arg\")\"
+          was_opt=\"1\"
+        elif [ \"\$was_opt\" -eq \"1\" ]; then
+          args=\"\$args\$(printf \"%q \" \"\$arg\")\"
+          was_opt=\"0\"
+        else
+          is_cmd=\"1\"
+        fi
+      fi
+      if [ \"\$is_cmd\" -eq \"1\" ]; then
+        cmd=\"\$cmd\$(printf \"%q\\ \" \"\$arg\")\"
+      fi
     done
-    inner=\"\$(printf %q \"source ~/.bashrc; \${arg}\")\"
-    cmd=\"\$(printf %q \"bash -c \$inner\")\"
-    eval \$args \$cmd
+    init=\"\$(printf %q \"source ~/.bashrc; \")\"
+    ev=\"\$(printf %q \"\$init\$cmd\")\"
+    eval \$args bash -c \$ev
   }
 "
