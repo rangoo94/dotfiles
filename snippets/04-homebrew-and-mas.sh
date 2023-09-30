@@ -22,7 +22,7 @@ sudo dscl . -create /Groups/homebrew gid 799
 sudo dscl . -append /Groups/homebrew GroupMembership "$(whoami)"
 sudo chgrp -R homebrew "$(brew --prefix)" &> /dev/null || true
 sudo chmod -R g+w "$(brew --prefix)" &> /dev/null || true
-find "$(brew --prefix)" -name '.git' -type d -exec bash -c 'git config --global --add safe.directory ${0%/.git}' {} \;
+find "$(brew --prefix)" -name '.git' -type d -exec bash -c 'git config --global --add safe.directory ${0%/.git}' {} \; || true
 success "Updated Homebrew permissions."
 
 brew analytics off
