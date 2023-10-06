@@ -28,6 +28,7 @@ brew "watch"
 brew "zsh"
 cask "font-microsoft-office"
 cask "iterm2"
+cask "macmediakeyforwarder"
 
 # Browsers
 
