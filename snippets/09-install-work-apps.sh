@@ -28,6 +28,11 @@ if variable_is_true "IS_WORK"; then
   # go
   bashrc_snippet "Golang Path" "export PATH=\"\$(go env GOPATH)/bin:\$PATH\""
 
+  # gotestsum
+  if ! [[ -x "$(command -v gotestsum)" ]]; then
+    go install gotest.tools/gotestsum@latest
+  fi
+
   # kubernetes-cli
   brew link --overwrite kubernetes-cli
 

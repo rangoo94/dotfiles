@@ -32,6 +32,7 @@ cask "jetbrains-toolbox"
 cask "postman"
 cask "altair-graphql-client"
 brew "datawire/blackbird/telepresence"
+brew "golangci-lint"
 
 # Security
 brew "nmap"
