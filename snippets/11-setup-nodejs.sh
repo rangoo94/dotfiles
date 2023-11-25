@@ -86,5 +86,6 @@ if variable_is_true "IS_WORK"; then
     create-next-app \
     ts-node \
     nodemon \
-    @funboxteam/optimizt
+    @funboxteam/optimizt \
+    wscat
 fi
