@@ -35,6 +35,9 @@ fi
 bashrc_setup
 _bashrc_add_snippet_to "$HOME/.zshrc" "Set plugins" "plugins=(aws azure brew bun bundler colored-man-pages colorize docker-compose docker gh git golang helm iterm2 kubectl macos nats node npm nvm postgres pyenv python react-native ruby skaffold terraform vagrant virtualenv yarn)"
 
+# terraform
+tfenv install && tfenv use
+
 # iterm2
 # TODO: Install theme?
 
