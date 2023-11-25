@@ -78,3 +78,9 @@ bashrc_snippet "Watch Bash command diff" "
     done
   }
 "
+
+bashrc_snippet "Help" "
+  dotlist() {
+    cat ~/.bashrc | grep -oE \"^[^(]*\\([ \"$'\t'\"]*\\)[ \"$'\t'\"]*\\{\" | grep -oE \"[^\"$'\t'\" (){]*\"
+  }
+"
