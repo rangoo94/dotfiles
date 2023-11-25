@@ -16,6 +16,15 @@ if variable_is_true "IS_WORK"; then
     kns() {
       kubens \$@
     }
+    kd() {
+      kubectl describe \$@
+    }
+    kg() {
+      kubectl get \$@
+    }
+    kl() {
+      kubectl logs \$@
+    }
   "
 
   bashrc_snippet "Telepresence aliases" "
