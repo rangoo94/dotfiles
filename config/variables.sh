@@ -8,5 +8,5 @@ VARIABLES_DEFINITION=(
   "COMPUTER_NAME"   "The readable computer name"     "text"  "Dawid Rusnak MBP"
   "GIT_NAME"        "Git name"                       "text"  "Dawid Rusnak"
   "GIT_EMAIL"       "Git e-mail address"             "email" "dawid@drcode.pl"
-  "NODE_VERSION"    "Version of Node.js"             "text"  "20"
+  "NODE_VERSION"    "Version of Node.js"             "text"  "21"
 )
