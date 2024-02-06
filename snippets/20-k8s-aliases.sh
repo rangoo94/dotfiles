@@ -41,4 +41,14 @@ if variable_is_true "IS_WORK"; then
       tp quit
     }
   "
+
+  header "Install Telepresence"
+
+  telepresence_version=2.17.0
+  arch="darwin-$(uname -m)"
+  if [[ "$arch" != "darwin-arm64" ]]; then
+    arch="darwin-amd64"
+  fi
+  sudo curl -fL https://app.getambassador.io/download/tel2oss/releases/download/v$telepresence_version/telepresence-$arch -o /usr/local/bin/telepresence
+  sudo chmod a+x /usr/local/bin/telepresence
 fi
