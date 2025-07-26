@@ -14,7 +14,7 @@ cask "android-platform-tools"
 mas "Amphetamine", id: 937984704
 
 # Databases
-brew "mongodb-community-shell"
+brew "mongosh"
 brew "libpq"
 brew "pgcli"
 
