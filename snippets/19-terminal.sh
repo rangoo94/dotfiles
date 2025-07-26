@@ -3,6 +3,8 @@
 cp "$(dirname "${BASH_SOURCE[0]}")/../assets/.p10k.zsh" "$HOME/.p10k.zsh"
 
 zshrc_snippet "ZSH: PowerLevel" "
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
   # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
   # Initialization code that may require console input (password prompts, [y/n]
   # confirmations, etc.) must go above this block; everything else may go below.
