@@ -29,9 +29,6 @@ bashrc_ldflags_add "Ruby" "-L$HOMEBREW_DIR/opt/ruby/lib"
 bashrc_cppflags_add "Ruby" "-I$HOMEBREW_DIR/opt/ruby/include"
 bashrc_setup
 
-# terraform
-tfenv install && tfenv use
-
 # Microsoft Excel & Microsoft Word
 postinstructions_add "microsoft-excel & microsoft-word" "Log in to the Microsoft Office"
 
