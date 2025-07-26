@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# add syntax highlighting to nano
+echo 'include "/opt/homebrew/Cellar/nano/*/share/nano/*.nanorc"' >> ~/.nanorc
+
 cp "$(dirname "${BASH_SOURCE[0]}")/../assets/.p10k.zsh" "$HOME/.p10k.zsh"
 
 zshrc_snippet "ZSH: PowerLevel" "
