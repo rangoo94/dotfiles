@@ -84,3 +84,9 @@ bashrc_snippet "Help" "
     cat ~/.bashrc | grep -oE \"^[^(]*\\([ \"$'\t'\"]*\\)[ \"$'\t'\"]*\\{\" | grep -oE \"[^\"$'\t'\" (){]*\"
   }
 "
+
+bashrc_snippet "PDF Compression" "
+  compresspdf() {
+    gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/\${3:-\"screen\"} -dCompatibilityLevel=1.4 -sOutputFile=\"\$2\" \"\$1\"
+  }
+"

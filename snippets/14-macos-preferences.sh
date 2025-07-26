@@ -3,6 +3,10 @@
 if macos; then
   header "Configuring macOS"
 
+  ## Disable guest account
+
+  defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
+
   ## Mail
 
   defaults write com.apple.Mail DisableReplyAnimations -bool true
@@ -89,6 +93,9 @@ if macos; then
 
   # Other
   defaults write -g AppleReduceDesktopTinting -bool yes
+
+  # Make MX Keys keyboard work better
+  defaults write /Library/Preferences/com.apple.airport.bt.plist bluetoothCoexMgmt Hybrid
 
   # Manual
   postinstructions_add "battery" "Enable displaying battery percentage in the menubar"

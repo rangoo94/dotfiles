@@ -1,2 +1,3 @@
 # DevOps, cloud & networking
 cask "vagrant"
+cask "virtualbox"

@@ -6,6 +6,7 @@ brew "nano"
 brew "openjdk"
 brew "git"
 brew "git-lfs"
+brew "git-extras"
 brew "jq"
 brew "yq"
 brew "wget"
@@ -28,8 +29,18 @@ brew "tree"
 brew "watch"
 brew "zsh"
 cask "font-microsoft-office"
-cask "iterm2"
+cask "ghostty"
+cask "1password"
+brew "1password-cli"
 cask "macmediakeyforwarder"
+brew "ghostscript"
+brew "antigen"
+
+# Assistants
+
+cask "raycast"
+cask "chatgpt"
+brew "gemini-cli"
 
 # Browsers
 
@@ -37,8 +48,8 @@ cask "google-chrome"
 
 # Documents & Graphics
 
+cask "obsidian"
 cask "adobe-acrobat-reader"
-cask "adobe-creative-cloud"
 cask "gimp"
 cask "affinity-photo"
 cask "affinity-designer"
@@ -49,7 +60,6 @@ mas "Microsoft Word", id: 462054704
 
 # Time tracking
 
-mas "TickTick:To-Do List, Calendar", id: 966085870
 mas "Toggl Track: Hours & Time Log", id: 1291898086
 
 # Communication

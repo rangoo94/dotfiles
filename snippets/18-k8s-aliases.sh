@@ -44,7 +44,7 @@ if variable_is_true "IS_WORK"; then
 
   header "Install Telepresence"
 
-  telepresence_version=2.17.0
+  telepresence_version=2.23.6
   arch="darwin-$(uname -m)"
   if [[ "$arch" != "darwin-arm64" ]]; then
     arch="darwin-amd64"

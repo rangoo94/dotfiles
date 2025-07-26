@@ -27,22 +27,10 @@ git lfs install
 bashrc_path_add "Ruby" "$HOMEBREW_DIR/opt/ruby/bin"
 bashrc_ldflags_add "Ruby" "-L$HOMEBREW_DIR/opt/ruby/lib"
 bashrc_cppflags_add "Ruby" "-I$HOMEBREW_DIR/opt/ruby/include"
-
-# zsh
-if ! [ -d ~/.oh-my-zsh ]; then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
 bashrc_setup
-_bashrc_add_snippet_to "$HOME/.zshrc" "Set plugins" "plugins=(aws azure brew bun bundler colored-man-pages colorize docker-compose docker gh git golang helm iterm2 kubectl macos nats node npm nvm postgres pyenv python react-native ruby skaffold terraform vagrant virtualenv yarn)"
 
 # terraform
 tfenv install && tfenv use
-
-# iterm2
-# TODO: Install theme?
-
-# adobe-creative-cloud
-postinstructions_add "adobe-creative-cloud" "Log in to Adobe Creative Cloud"
 
 # Microsoft Excel & Microsoft Word
 postinstructions_add "microsoft-excel & microsoft-word" "Log in to the Microsoft Office"
@@ -55,9 +43,6 @@ postinstructions_add "slack" "Log in to the Slack"
 
 # affinity-photo & affinity-designer
 postinstructions_add "affinity-photo & affinity-designer" "Log in to the Affinity stack"
-
-# TickTick
-postinstructions_add "tick-tick" "Log in to the TickTick app"
 
 # Toggl
 postinstructions_add "toggl" "Log in to the Toggl app"

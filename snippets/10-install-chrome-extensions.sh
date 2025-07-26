@@ -6,14 +6,12 @@ install_extensions() {
   # "browser"
   browser=$1
 
-  chrome_extension_add "$browser" "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
   chrome_extension_add "$browser" "jeoacafpbcihiomhlakheieifhpjdfeo" # Disconnect
   chrome_extension_add "$browser" "kbfnbcaeplbcioakkpcpgfkobkghlhen" # Grammarly
   chrome_extension_add "$browser" "gbmdgpbipfallnflgajpaliibnhdgobh" # JSON Viewer
   chrome_extension_add "$browser" "fdpohaocaechififmbbbbbknoalclacl" # Full Page Screen Capture
 
   if variable_is_true "IS_WORK"; then
-    chrome_extension_add "$browser" "jlmafbaeoofdegohdhinkhilhclaklkp" # OctoLinker
     chrome_extension_add "$browser" "hgpnhiajcdppfbogcpfdgcceepgkhdmk" # Perfmap
     chrome_extension_add "$browser" "fmkadmapgofadopljbjfkapdkoienihi" # React DevTools
     chrome_extension_add "$browser" "lmhkpmbekcpmknklioeibfkpmmfibljd" # Redux DevTools

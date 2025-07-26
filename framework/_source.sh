@@ -46,6 +46,11 @@ bashrc_snippet() {
   _bashrc_add_snippet_to "$HOME/.bashrc" "$1" "$2"
 }
 
+zshrc_snippet() {
+  # "name" "snippet"
+  _bashrc_add_snippet_to "$HOME/.zshrc" "$1" "$2"
+}
+
 bashrc_path_add() {
   # "name" "path"
   bashrc_snippet "$1 - Path" "export PATH=\"$2:\$PATH\""
