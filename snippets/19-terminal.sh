@@ -1,9 +1,18 @@
 #!/bin/bash
 
+cp "$(dirname "${BASH_SOURCE[0]}")/../assets/.p10k.zsh" "$HOME/.p10k.zsh"
+
+zshrc_snippet "ZSH: PowerLevel" "
+  # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+  # Initialization code that may require console input (password prompts, [y/n]
+  # confirmations, etc.) must go above this block; everything else may go below.
+  if [[ -r \"\${XDG_CACHE_HOME:-\$HOME/.cache}/p10k-instant-prompt-\${(%):-%n}.zsh\" ]]; then
+    source \"\${XDG_CACHE_HOME:-\$HOME/.cache}/p10k-instant-prompt-\${(%):-%n}.zsh\"
+  fi
+"
+
 zshrc_snippet "ZSH: Antigen" "
   source /opt/homebrew/share/antigen/antigen.zsh
-
-  antigen theme robbyrussell
 
   antigen use oh-my-zsh
 
@@ -18,6 +27,8 @@ zshrc_snippet "ZSH: Antigen" "
     zsh-users/zsh-autosuggestions
     zsh-users/zsh-completions
 EOBUNDLES
+
+  antigen theme romkatv/powerlevel10k
 
   antigen apply
 "
