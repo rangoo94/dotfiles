@@ -59,13 +59,6 @@ Including:
 * Postman
 * Spotify
 
-## Touchbar
-
-* Configure Touchbar to show "brightness slider" and "mute" natively
-* Set up [BetterTouchTool](https://folivora.ai/) license
-* Import [`rangoo94.bttpreset`](assets/rangoo94.bttpreset) into BTT
-* Install [`btt-toggl`](https://www.npmjs.com/package/btt-toggl) NPM package, fix it, configure it and set up proper script in "Toggl"
-
 ## Other stuff
 
 * Disable guest account
