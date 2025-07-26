@@ -5,7 +5,7 @@ if macos; then
 
   ## Disable guest account
 
-  defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
+  sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
 
   ## Mail
 
