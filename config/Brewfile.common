@@ -36,6 +36,11 @@ cask "macmediakeyforwarder"
 brew "ghostscript"
 brew "antigen"
 
+# Hardware
+
+cask "logitech-g-hub"
+cask "logi-options+"
+
 # Assistants
 
 cask "raycast"
