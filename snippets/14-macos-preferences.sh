@@ -59,16 +59,16 @@ if macos; then
 
   # Safari
 
-  defaults write com.apple.Safari IncludeDevelopMenu -bool true
-  defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-  defaults write com.apple.Safari ShowOverlayStatusBar -bool true
-  defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
-  defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-  defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-  defaults write -globalDomain WebKitDeveloperExtras -bool true
-  defaults write com.apple.Safari UniversalSearchEnabled -bool false
-  defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-  defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+  sudo defaults write com.apple.Safari IncludeDevelopMenu -bool true
+  sudo defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+  sudo defaults write com.apple.Safari ShowOverlayStatusBar -bool true
+  sudo defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+  sudo defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+  sudo defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+  sudo defaults write -globalDomain WebKitDeveloperExtras -bool true
+  sudo defaults write com.apple.Safari UniversalSearchEnabled -bool false
+  sudo defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+  sudo defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
   killall Safari || true
 
   # App Store
