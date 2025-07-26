@@ -2,6 +2,7 @@
 tap "owasp-amass/amass"
 tap "mongodb/brew"
 tap "datawire/blackbird"
+tap "localstack/tap"
 
 # Tooling
 brew "autoconf"
@@ -70,10 +71,10 @@ cask "docker"
 cask "openlens"
 cask "wireshark"
 cask "ngrok"
-brew "flox"
+cask "flox"
 brew "tilt"
 brew "skaffold"
-brew "localstack/tap/localstack-cli"
+brew "localstack-cli"
 
 # Communication
 cask "zoom"
