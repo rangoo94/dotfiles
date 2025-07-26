@@ -22,6 +22,7 @@ zshrc_snippet "ZSH: Antigen" "
     git git-extras git-lfs gh adb bun golang nats node npm nvm postgres pip pyenv python react-native ruby virtualenv yarn
     brew colored-man-pages colorize macos command-not-found 1password history-substring-search
 
+    MichaelAquilina/zsh-you-should-use
     unixorn/autoupdate-antigen.zshplugin
     zsh-users/zsh-syntax-highlighting
     zsh-users/zsh-autosuggestions
