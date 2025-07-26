@@ -9,7 +9,7 @@ zshrc_snippet "ZSH: Antigen" "
 
   antigen bundle <<EOBUNDLES
     common-aliases
-    aws azure gcloud docker-compose docker helm kubectl skaffold terraform argocd
+    aws azure gcloud docker-compose docker helm kubectl skaffold terraform argocd localstack
     git git-extras git-lfs gh adb bun golang nats node npm nvm postgres pip pyenv python react-native ruby virtualenv yarn
     brew colored-man-pages colorize macos command-not-found 1password history-substring-search
 

@@ -74,6 +74,7 @@ cask "ngrok"
 brew "flox"
 brew "tilt"
 brew "skaffold"
+brew "localstack/tap/localstack-cli"
 
 # Communication
 cask "zoom"
