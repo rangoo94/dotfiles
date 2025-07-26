@@ -9,9 +9,9 @@ if macos; then
 
   ## Mail
 
-  defaults write com.apple.Mail DisableReplyAnimations -bool true
-  defaults write com.apple.Mail DisableSendAnimations -bool true
-  defaults write com.apple.mail ConversationViewSortDescending -bool true
+  sudo defaults write com.apple.Mail DisableReplyAnimations -bool true
+  sudo defaults write com.apple.Mail DisableSendAnimations -bool true
+  sudo defaults write com.apple.mail ConversationViewSortDescending -bool true
 
   ## UI
 
