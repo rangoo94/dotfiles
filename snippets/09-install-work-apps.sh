@@ -17,6 +17,9 @@ if variable_is_true "IS_WORK"; then
     brew bundle --file="$(dirname "${BASH_SOURCE[0]}")/../config/Brewfile.work.intel-only"
   fi
 
+  # terraform
+  tfenv install && tfenv use
+
   # Register the apps
 
   # libpq
