@@ -26,7 +26,7 @@ install_extensions "Chrome"
 postinstructions_add "google-chrome" "Run Google Chrome and enable all extensions from alerts."
 postinstructions_add "grammarly" "Log in to Grammarly in Google Chrome."
 
-if brew list google-chrome-canary &> /dev/null; then
+if brew list "google-chrome@canary" &> /dev/null; then
   install_extensions "Chrome Canary"
   postinstructions_add "google-chrome-canary" "Run Google Chrome and enable all extensions from alerts."
 fi
