@@ -38,7 +38,7 @@ brew "antigen"
 
 # Hardware
 
-cask "logitech-g-hub"
+#cask "logitech-g-hub"
 cask "logi-options+"
 
 # Assistants
